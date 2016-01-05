@@ -19,3 +19,7 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+
+Route::get('social', 'SocialController@getSocialAuth');
+Route::get('social/callback', 'SocialController@getSocialAuthCallback');

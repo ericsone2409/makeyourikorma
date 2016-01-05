@@ -34,4 +34,10 @@ return [
 		'secret' => '',
 	],
 
+	'facebook' => [
+	'client_id' => '1682507535341378',
+	'client_secret' => '76e8ee6da5b09783a21c26fd87b7e8a6',
+	'redirect' => 'http://ikorma.php/social/callback',
+],
+
 ];
