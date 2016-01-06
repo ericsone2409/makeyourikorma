@@ -25,20 +25,20 @@ class SocialController extends Controller {
 
  	public function getSocialAuthCallback()
 	{
-
 		$userSocial = Socialize::with('facebook')->user();
 
 		$id = $userSocial->getId();
 
 		$user = User::where('social_id', '=', $id)->first();
 		if ($user) {
-			//return de prueba
-			return "<h2>".$userSocial->getId()." Todo bienn!</h2>";
+			Auth::login($user);
+			return redirect('home');
 		}else{
-			$usuario->save();
 			//return de prueba
 			$usuario = User::create(['social_id'=>$userSocial->getId() ,'name'=>$userSocial->getName()]);
-			return "<h2>".$userSocial->getId()." Todo bien!</h2>";
+			$usuario->save();
+			Auth::login($usuario);
+			return redirect('home');
 		}
 
 
