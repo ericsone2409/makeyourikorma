@@ -30,10 +30,15 @@ class SocialController extends Controller {
 		$id = $userSocial->getId();
 
 		$user = User::where('social_id', '=', $id)->first();
-		if ($user) {
+		
+		if ($user)
+		{
 			Auth::login($user);
 			return redirect('home');
-		}else{
+		}
+
+		else
+		{
 			//return de prueba
 			$usuario = User::create(['social_id'=>$userSocial->getId() ,'name'=>$userSocial->getName()]);
 			$usuario->save();
