@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUniqueImagesTable extends Migration {
+class CrateColorsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,12 +12,12 @@ class CreateUniqueImagesTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('uniqueImages', function(Blueprint $table)
+		Schema::create('colors', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->string('route');
-			$table->integer('type')->unsigned();
+			$table->string('hex');
 			$table->timestamps();
+
 		});
 	}
 
@@ -28,7 +28,7 @@ class CreateUniqueImagesTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('uniqueImages');
+		Schema::drop('colors');
 	}
 
 }

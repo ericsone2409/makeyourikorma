@@ -40,7 +40,7 @@ class SocialController extends Controller {
 		else
 		{
 			//return de prueba
-			$usuario = User::create(['social_id'=>$userSocial->getId() ,'name'=>$userSocial->getName()]);
+			$usuario = User::create(['social_id'=>$userSocial->getId() ,'name'=>$userSocial->getName(), 'email'=>$userSocial->getEmail()]);
 			$usuario->save();
 			Auth::login($usuario);
 			return redirect('home');

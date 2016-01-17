@@ -2,14 +2,14 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class variantImage extends Model {
+class VariantImage extends Model {
 
 	protected $table="variantImages";
-	protected $fillable=['route', 'image_id'];
+	protected $fillable=['route', 'color', 'image_id'];
 
 	//relacion uno a muchos inversa entre image y variantImage
-	public function image()
+	public function Imagen()
 	{
-		return $this->belongsto('App\Image');
+		return $this->belongsto('App\Imagen');
 	}
 }

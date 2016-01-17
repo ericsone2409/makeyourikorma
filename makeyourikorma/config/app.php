@@ -146,7 +146,8 @@ return [
 		'App\Providers\RouteServiceProvider',
 
 		//proveedores personales:
-		'Laravel\Socialite\SocialiteServiceProvider'
+		'Laravel\Socialite\SocialiteServiceProvider',
+		'Intervention\Image\ImageServiceProvider'
 
 	],
 
@@ -198,6 +199,7 @@ return [
 
 		//facades personales:
 		'Socialize' => 'Laravel\Socialite\Facades\Socialite',
+		'Image' => 'Intervention\Image\Facades\Image',
 
 	],
 
