@@ -8,20 +8,30 @@ class UniqueImagesTableSeeder extends Seeder {
 
 	public function run()
 	{
-		$faker= Faker::create();
 
-		for ($i=0; $i < 15; $i++) { 
-			$tipo='0';
-			if ($i<=10 && $i>=5) {
-				$tipo='1';
-			}elseif ($i<=15 && $i>=11) {
-				$tipo='2';
-			}
+		$dir = dirname(dirname(dirname(__DIR__)));
+		$dir = $dir . "\\public_html\\img\\uniques\\";
+		echo "Directorio de iamgenes unicas: $dir \n";
+
+
+
+		$file_set = File::allFiles($dir);
+		foreach ($file_set as $file)
+		{
+			$filename = (string) $file;
+			$type = explode("\\", dirname($filename));
+			$type = $type[count($type) - 1];
+			$uri = str_replace("\\", '/', explode('img', $filename)[1]);
+			$uri = 'img' . $uri;
+			
+
 			\DB::table('uniqueImages')->insert(array (
-				'route' => $faker->lexify('img/unique/???'),
-				'type'  => $tipo
+				'route' => $uri,
+				'type'  => $type
 			));
 		}
+
+
 
 
 	}

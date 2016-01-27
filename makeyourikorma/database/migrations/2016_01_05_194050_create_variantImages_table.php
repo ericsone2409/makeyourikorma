@@ -32,7 +32,7 @@ class CreateVariantImagesTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('variantImages');
+		Schema::dropIfExists('variantImages');
 	}
 
 }
