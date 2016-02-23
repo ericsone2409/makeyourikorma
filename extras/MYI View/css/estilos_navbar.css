@@ -2,16 +2,15 @@
     font-family: "ikorma";
     src: url("../font/Ikorma.ttf");
 }
-header{
-	width: 95%;
-	margin: 0 auto;
-}
 .navbar-default {
   background-color: #4f4f4f;
   border-color: #4f4f4f;
+  margin-bottom: 0;
 }
 .navbar-default .navbar-brand {
   color: #b8b8b8;
+}
+.navbar-default .navbar-brand img{
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
@@ -30,8 +29,6 @@ header{
 }
 /*PERONAL*/
 .navbar-default .navbar-nav{
-	border-left: solid rgb(199,199,199) 2px;
-	border-right: solid rgb(199,199,199) 2px;
 	text-align: center;
 
 }
@@ -95,13 +92,24 @@ header{
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
   border-color: #b8b8b8;
-  margin-top: 50px;
 }
 .navbar-default .navbar-link {
   color: #b8b8b8;
 }
 .navbar-default .navbar-link:hover {
   color: #b4b4b4;
+}
+.navbar-default .navbar-header{
+	height: 100px;
+}
+/*PERSONAL*/
+body header .lista{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	background: rgb(79,79,79);
+	z-index: 1;
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
@@ -132,6 +140,10 @@ header{
 	.navbar-default .navbar-collapse,
 	.navbar-default .navbar-form {
 		margin-top: 0px;
+	}
+	body header .lista{
+		position: inherit;
+		padding: auto;
 	}
 }
 
