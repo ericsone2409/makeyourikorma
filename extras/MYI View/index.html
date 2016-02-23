@@ -5,6 +5,7 @@
 	<title>Document</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/estilos.css">
 	<link rel="stylesheet" href="css/estilos_navbar.css">
 </head>
@@ -21,12 +22,12 @@
 		        <span class="icon-bar"></span>
 		      </button>
 		      <a class="navbar-brand" href="#">
-		      	<img src="img/logo.png">
+		      	<img class="img-responsive" src="img/logo.png">
 		      </a>
 		    </div>
 
 		    <!-- Collect the nav links, forms, and other content for toggling -->
-		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		    <div class="collapse navbar-collapse lista" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav">
 		        <li><a class="centrar" href="#">HOME</a></li>
 		        <li><a href="#">
@@ -35,17 +36,17 @@
 						<p class="segundo" id="segundo">IKORMA</p>
 					</div>
 		        </a></li>
-		        <li class="disabled"><a href="#">
+		        <li><a href="#">
 		        	<div class="compact">
 						<p class="primero" id="ampms">IKORMA</p>
 						<p class="segundo" id="segundo">UNIVERSE</p>
 					</div>
 		        </a></li>
-		        <li class="disabled"><a class="centrar" href="#">CONTACT</a></li>
+		        <li><a class="centrar" href="#">CONTACT</a></li>
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
-		</nav>
+		</nav>	
 	</header>
 
 	<div class="center">
@@ -60,17 +61,28 @@
 				</div>
 				<div class="canvas-container col-xs-12 col-lg-9">
 					<a href="#" class="download">
-						<img class="img-responsive" src="img/download.png">
+						<span class="fa-stack fa-lg">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-download fa-stack-1x"></i>
+						</span>
 					</a>
 					<a href="#" class="share">
-						<img class="img-responsive" src="img/share.png">
+						<span class="fa-stack fa-lg">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-share-alt fa-stack-1x"></i>
+						</span>
 					</a>
 					<a href="#" class="delete">
-						<img class="img-responsive" src="img/delete.png">
+						<div>
+							<span class="fa-stack fa-lg">
+								<i class="fa fa-circle fa-stack-2x"></i>
+								<i class="fa fa-trash fa-stack-1x"></i>
+							</span>
+						</div>
 					</a>
-					<div class="canvas">
+					<canvas width="225" height="260">
 						
-					</div>
+					</canvas>
 				</div>
 			</div>
 		</div>
@@ -82,9 +94,24 @@
 				<div class="copy">
 					<p>Copyright © 2016 IKORMA. <p class="hidden-xs"> All rights reserved.</p> </p>
 				</div>
-				<a href="#" class="social"><img class="img-responsive" src="img/instagram.png"></a>
-				<a href="#" class="social"><img class="img-responsive" src="img/facebook.png"></a>
-				<a href="#" class="social"><img class="img-responsive" src="img/youtube.png"></a>
+				<a href="#" class="social">
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-circle fa-stack-2x"></i>
+						<i class="fa fa-youtube-play fa-stack-1x"></i>
+					</span>
+				</a>
+				<a href="#" class="social">
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-circle fa-stack-2x"></i>
+						<i class="fa fa-facebook fa-stack-1x"></i>
+					</span>
+				</a>
+				<a href="#" class="social">
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-circle fa-stack-2x"></i>
+						<i class="fa fa-instagram fa-stack-1x"></i>
+					</span>
+				</a>
 			</div>
 		</div>
 		
