@@ -11,15 +11,26 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+//RUTA DE LA PAGINA PRINCIPAL
+Route::get('/', [
+	'uses' => 'WelcomeController@index',
+	'as'   => 'home'
+]);
 
-Route::get('home', 'HomeController@index');
+//TURA PARA EL MYI
+Route::get('MYI', [
+	'uses' => 'MyiController@index',
+	'as'   => 'myi'
+]);
+
+
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
 
+//RUTAS PARA EL INICIO DE SESION CON FACE
 
-Route::get('social', 'SocialController@getSocialAuth');
-Route::get('social/callback', 'SocialController@getSocialAuthCallback');
+//Route::get('social', 'SocialController@getSocialAuth');
+//Route::get('social/callback', 'SocialController@getSocialAuthCallback');
