@@ -35,6 +35,8 @@ $(document).ready(function() {
 			$(".canvas-container > div").removeClass('show');
 		}
 		$("#colors-container").toggleClass('show');
+		$("body .center ul li a").addClass('not-show');
+		$("#shapes-img").removeClass('not-show');
 		event.preventDefault();
 	});
 	$("#layers").click(function(event) {
@@ -43,6 +45,8 @@ $(document).ready(function() {
 			$(".canvas-container > div").removeClass('show');
 		}
 		$("#layers-container").toggleClass('show');
+		$("body .center ul li a").addClass('not-show');
+		$("#shapes-img").removeClass('not-show');
 		event.preventDefault();
 	});
 });
