@@ -3,6 +3,8 @@ $(document).ready(function() {
 		/* Act on the event */
 		$("body .center ul li a").removeClass('not-show');
 		$("#shapes-img").toggleClass('not-show');
+		$("#shapes-container").removeClass('show');
+		$("#facials-container").removeClass('show');
 		event.preventDefault();
 	});
 	$("body .center ul li a").click(function(event) {
@@ -13,25 +15,33 @@ $(document).ready(function() {
 	});
 	$("#shapes").click(function(event) {
 		/* Act on the event */
-		$(".canvas-container > div").removeClass('show');
+		if (!($("#shapes-container").hasClass('show'))) {
+			$(".canvas-container > div").removeClass('show');
+		}
 		$("#shapes-container").toggleClass('show');
 		event.preventDefault();
 	});
 	$("#facials").click(function(event) {
 		/* Act on the event */
-		$(".canvas-container > div").removeClass('show');
+		if (!($("#facials-container").hasClass('show'))) {
+			$(".canvas-container > div").removeClass('show');
+		}
 		$("#facials-container").toggleClass('show');
 		event.preventDefault();
 	});
 	$("#colors").click(function(event) {
 		/* Act on the event */
-		$(".canvas-container > div").removeClass('show');
+		if (!($("#colors-container").hasClass('show'))) {
+			$(".canvas-container > div").removeClass('show');
+		}
 		$("#colors-container").toggleClass('show');
 		event.preventDefault();
 	});
 	$("#layers").click(function(event) {
 		/* Act on the event */
-		$(".canvas-container > div").removeClass('show');
+		if (!($("#layers-container").hasClass('show'))) {
+			$(".canvas-container > div").removeClass('show');
+		}
 		$("#layers-container").toggleClass('show');
 		event.preventDefault();
 	});
