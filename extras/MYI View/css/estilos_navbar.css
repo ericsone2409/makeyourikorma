@@ -109,7 +109,7 @@ body header .lista{
 	height: 100%;
 	padding: 0;
 	background: rgb(79,79,79);
-	z-index: 1;
+	z-index: 10;
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
