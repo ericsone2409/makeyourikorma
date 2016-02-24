@@ -121,6 +121,9 @@ body .center .canvas-container .delete{
 	color: rgb(79,79,79);
 	font-size: 1.7em;
 }
+.send{
+	top: 150px;
+}
 body .center canvas{
 	background: #fff;
 	box-shadow: 8px 8px 4px rgb(122,122,122);
