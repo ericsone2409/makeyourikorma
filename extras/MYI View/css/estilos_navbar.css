@@ -2,6 +2,9 @@
     font-family: "ikorma";
     src: url("../font/Ikorma.ttf");
 }
+.top-margin{
+	margin-top: 5px;
+}
 .navbar-default {
   background-color: #4f4f4f;
   border-color: #4f4f4f;
@@ -23,9 +26,7 @@
 .navbar-default .navbar-nav > li > a {
   color: #b8b8b8;
   font-family: "ikorma";
-  font-size: 1.3em;
-  font-weight: 150px;
-  padding-bottom: 20px;
+  font-size: 1.5em;
 }
 /*PERONAL*/
 .navbar-default .navbar-nav{
@@ -43,8 +44,8 @@
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: rgb(91,91,91);
-  background: rgb(180,180,180);
+  color: #fff;
+
 }
 .navbar-default .navbar-nav > li > .dropdown-menu {
   background-color: #4f4f4f;
@@ -109,7 +110,7 @@ body header .lista{
 	height: 100%;
 	padding: 0;
 	background: rgb(79,79,79);
-	z-index: 1;
+	z-index: 10;
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
@@ -125,7 +126,10 @@ body header .lista{
 	}
 	/*PERONAL*/
 	.navbar-default .navbar-nav{
-		margin-top: 20px;
+		margin-top: 25px;
+		border-left: solid rgb(239,239,239) 1.3px;
+		border-right: solid rgb(239,239,239) 1.3px;
+		margin-left: 5px;
 	}
 	/*PERONAL*/
 	.navbar-default .navbar-nav > li > a >.compact {
@@ -144,6 +148,9 @@ body header .lista{
 	body header .lista{
 		position: inherit;
 		padding: auto;
+	}
+	.navbar-default .navbar-nav > li > a {
+	  line-height: 10px;
 	}
 }
 
