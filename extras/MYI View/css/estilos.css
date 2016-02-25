@@ -7,20 +7,11 @@ body{
 	-o-box-sizing: border-box;
 	background: rgb(79,79,79);
 	z-index: 300;
-	overflow-x: hidden;
-	overflow-y: hidden;
 }
-.not-show{
-	-webkit-transform: translateX(-500px);
-	-ms-transform: translateX(-500px);
-	-o-transform: translateX(-500px);
-	transform: translateX(-500px);
-}
-
 .shapes-container{
-	position: absolute;
+	position: fixed;
 	width: 100%;
-	height: 100%;
+	height: calc(100% - 102px);
 	-webkit-transition: all 0.3s ease;
 	-o-transition: all 0.3s ease;
 	transition: all 0.3s ease;
@@ -29,7 +20,7 @@ body{
 	z-index: 1;
 	right: -200%;
 	bottom: 0;
-	overflow-y: auto; 
+	overflow-y: auto;
 }
 .shapes-container ul > li{
 	width:calc(20% - 10px);
@@ -59,8 +50,8 @@ body{
 
 }
 .colors-container{
-	position: absolute;
-	width: 27%;
+	position: fixed;
+	width: 40%;
 	height: 100%;
 	background: rgb(107,107,107);
 	margin-top: -15px;
@@ -79,8 +70,8 @@ body{
 }
 .colors-container ul > li{
 	list-style: none;
-	width:15px;
-	height:15px;
+	width:20px;
+	height:20px;
 	display:inline-block;
 	margin:2px;
 	border:1px solid rgb(255,255,255);
@@ -89,8 +80,8 @@ body{
 	background: navy;
 }
 .layers-container{
-	position: absolute;
-	width: 38%;
+	position: fixed;
+	width: 40%;
 	height: 100%;
 	background: rgb(107,107,107);
 	margin-top: -15px;
@@ -150,25 +141,38 @@ body{
 .show{
 	right: 0;
 }
-body .center  .menu > a{
+body .center  .menu > a, body .center .menu .dropdown-mine > a{
 	display: inline-block;
 	width: 32%;
 	-webkit-transition: all 0.3s ease;
 	-o-transition: all 0.3s ease;
 	transition: all 0.3s ease;
+	opacity: 0.75;
 }
+body .center  .menu > a:hover, body .center .menu .dropdown-mine > a:hover{
+	opacity: 1;
+}
+.dropdown-mine{
+	display: inline;
+}
+.dropdown-menu-mine{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	z-index: 2;
+	background: rgb(79,79,79);
+	padding: 0;
+	display: none;
+	border: solid #fff 1px;
+}
+.dropdown-menu-mine li, 
 body .center .menu{
 	padding: 0;
 }
 body .center .menu li{
 	list-style: none;
-}
-body .center .menu li a{
-	position: absolute;
-	top: 0;
-}
-body .center .menu li .fix{
-	top: 30px;
+	text-align: center;
+	text-align: -webkit-center;
 }
 body .center .menu li a{
 	display: block;
@@ -178,6 +182,8 @@ body .center .menu li a{
 	-webkit-transition: all 0.3s ease;
 	-o-transition: all 0.3s ease;
 	transition: all 0.3s ease;
+	margin-bottom: 13px;
+	font-size: 1.2em;
 }
 body .center .canvas-container{
 	position: relative;
@@ -245,6 +251,9 @@ body .center canvas{
 body footer{
 	padding: 5px 0;
 	padding-left: 5px;
+	position: relative;
+	bottom:0;
+	width: 100%;
 }
 
 body footer .copy{
@@ -298,8 +307,21 @@ body footer .social{
 	.delete div span i:last-child{
 		font-size: 1.7em;
 	}
+	body footer{
+		padding: 5px 0;
+		padding-left: 5px;
+		position: relative;
+	}
+	body .center .menu li a{
+		margin-bottom: 18px;
+		font-size: 1.5em;
+	}
 	.colors-container, .layers-container{
-		width: 16%;
+		width: 35%;
+		height: calc(100% - 178px);
+	}
+	.shapes-container{
+		height: calc(100% - 178px);
 	}
 }
 
@@ -345,12 +367,6 @@ body footer .social{
 	body .center{
 	padding-right: 50px;
 	}
-	body .center .menu a{
-		width: 100%;
-		margin-bottom: 70px;
-		display: block;
-		margin-left: 20%;
-	}
 	body .center canvas{
 		width: 40%;
 	}
@@ -375,9 +391,25 @@ body footer .social{
 		margin-right: 10%;
 		margin-left: 30px;
 	}
-	body .center .menu li a{
+	body .center  .menu > a, body .center .menu .dropdown-mine > a{
+		width: 100%;
+		margin-bottom: 70px;
+		display: block;
 		margin-left: 20%;
-		font-size: 18px;
-		line-height: 45px;
+	}
+	.dropdown-mine{
+		display: inline;
+	}
+	.dropdown-menu-mine{
+		left: 100%;
+		top: 0;
+	}
+	.shapes-container{
+		width: 83.33333333%;
+		height: calc(100% - 102px);
+	}
+	.colors-container, .layers-container{
+		width: 28%;
+		height: 100%;
 	}
 }

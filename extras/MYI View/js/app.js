@@ -1,16 +1,7 @@
 $(document).ready(function() {
 	$("#shapes-img").click(function(event) {
 		/* Act on the event */
-		$("body .center ul li a").removeClass('not-show');
-		$("#shapes-img").toggleClass('not-show');
-		$("#shapes-container").removeClass('show');
-		$("#facials-container").removeClass('show');
-		event.preventDefault();
-	});
-	$("body .center ul li a").click(function(event) {
-		/* Act on the event */
-		$("body .center ul li a").toggleClass('not-show');
-		$("#shapes-img").removeClass('not-show');
+		$("#dropdown-menu-mine").slideToggle(370);
 		event.preventDefault();
 	});
 	$("#shapes").click(function(event) {
@@ -18,6 +9,7 @@ $(document).ready(function() {
 		if (!($("#shapes-container").hasClass('show'))) {
 			$(".canvas-container > div").removeClass('show');
 		}
+		$("#dropdown-menu-mine").slideToggle(370);
 		$("#shapes-container").toggleClass('show');
 		event.preventDefault();
 	});
@@ -26,6 +18,7 @@ $(document).ready(function() {
 		if (!($("#facials-container").hasClass('show'))) {
 			$(".canvas-container > div").removeClass('show');
 		}
+		$("#dropdown-menu-mine").slideToggle(370);
 		$("#facials-container").toggleClass('show');
 		event.preventDefault();
 	});
@@ -35,8 +28,7 @@ $(document).ready(function() {
 			$(".canvas-container > div").removeClass('show');
 		}
 		$("#colors-container").toggleClass('show');
-		$("body .center ul li a").addClass('not-show');
-		$("#shapes-img").removeClass('not-show');
+		$("#dropdown-menu-mine").slideUp(370);
 		event.preventDefault();
 	});
 	$("#layers").click(function(event) {
@@ -45,8 +37,13 @@ $(document).ready(function() {
 			$(".canvas-container > div").removeClass('show');
 		}
 		$("#layers-container").toggleClass('show');
-		$("body .center ul li a").addClass('not-show');
-		$("#shapes-img").removeClass('not-show');
+		$("#dropdown-menu-mine").slideUp(370);
 		event.preventDefault();
 	});
+	$("#logo").click(function(event) {
+		/* Act on the event */
+		$(".canvas-container > div").removeClass('show');
+	});
+	$(".canvas-container > div").perfectScrollbar();
+	$(".canvas-container > div").perfectScrollbar('update'); 
 });
