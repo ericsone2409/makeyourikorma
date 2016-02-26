@@ -18,7 +18,7 @@ Route::get('/', [
 ]);
 
 //TURA PARA EL MYI
-Route::get('MYI', [
+Route::get('/myi', [
 	'uses' => 'MyiController@index',
 	'as'   => 'myi'
 ]);

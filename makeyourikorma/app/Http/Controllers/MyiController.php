@@ -9,7 +9,7 @@ class MyiController extends Controller {
 	
 	public function index()
 	{
-		return view('welcome'); //aqui hay que poner la vista del MYI
+		return view('myi'); //aqui hay que poner la vista del MYI
 	}
 
 }
