@@ -9,7 +9,12 @@ class MyiController extends Controller {
 	
 	public function index()
 	{
-		return view('myi'); //aqui hay que poner la vista del MYI
+		return view('myi');
+	}
+
+	public function share()
+	{
+		return view('share');
 	}
 
 }

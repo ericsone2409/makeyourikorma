@@ -46,4 +46,18 @@ $(document).ready(function() {
 	});
 	$(".canvas-container > div").perfectScrollbar();
 	$(".canvas-container > div").perfectScrollbar('update'); 
+
+	$("#delete").click(function(event) {
+		/* Act on the event */
+		canvas.width= canvas.width;
+		event.preventDefault();
+	});
+
+	$("#download").click(function(event) {
+		/* Act on the event */
+		var dato = canvas.toDataURL("image/png");
+		dato = dato.replace("image/png", "image/octet-stream");
+		document.location.href = dato;	
+		event.preventDefault();
+	});
 });

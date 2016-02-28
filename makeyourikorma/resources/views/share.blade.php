@@ -1,6 +1,6 @@
 @extends('main')
 
-@section('title', 'Make Your Ikorma')
+@section('title', 'Share Make Your Ikorma')
 
 @section('head')
 	<link rel="stylesheet" href="{{ asset('plugins/perfectscroll/css/perfect-scrollbar.css') }}">
@@ -12,30 +12,6 @@
 @endsection
 
 @section('body')
-<script>
-function ejecutar (e) {
-		  window.fbAsyncInit = function() {
-		    FB.init({
-		      appId      : '1682507535341378',
-		      xfbml      : true,
-		      version    : 'v2.5'
-		    });
-		    FB.ui({
-				method: 'share',
-				href: 'http://ikorma.php/myi/share'
-			}, function(response){});
-		  };
-
-		  (function(d, s, id){
-		     var js, fjs = d.getElementsByTagName(s)[0];
-		     if (d.getElementById(id)) {return;}
-		     js = d.createElement(s); js.id = id;
-		     js.src = "//connect.facebook.net/en_US/sdk.js";
-		     fjs.parentNode.insertBefore(js, fjs);
-		   }(document, 'script', 'facebook-jssdk'));
-	e.preventDefault();
-}
-</script>
 </div>
 	<div class="center">
 		<div class="container-fluid">
@@ -77,33 +53,7 @@ function ejecutar (e) {
 						<ul class="layers">
 						</ul>
 					</div>
-					<a href="#" title="Download" class="download" id="download">
-						<span class="fa-stack fa-lg">
-							<i class="fa fa-circle fa-stack-2x"></i>
-							<i class="fa fa-download fa-stack-1x"></i>
-						</span>
-					</a>
-					<a href="#" onclick="ejecutar(event);" title="Share" class="share">
-						<span class="fa-stack fa-lg">
-							<i class="fa fa-circle fa-stack-2x"></i>
-							<i class="fa fa-share-alt fa-stack-1x"></i>
-						</span>
-					</a>
-					<a href="#" title="Send" class="download send">
-						<span class="fa-stack fa-lg">
-							<i class="fa fa-circle fa-stack-2x"></i>
-							<i class="fa fa-send fa-stack-1x"></i>
-						</span>
-					</a>
-					<a href="#" title="Delete" class="delete" id="delete">
-						<div>
-							<span class="fa-stack fa-lg">
-								<i class="fa fa-circle fa-stack-2x"></i>
-								<i class="fa fa-trash fa-stack-1x"></i>
-							</span>
-						</div>
-					</a>
-					<canvas width="225" height="260" id="canvas">
+					<canvas width="225" height="260">
 						
 					</canvas>
 				</div>

@@ -23,6 +23,10 @@ Route::get('/myi', [
 	'as'   => 'myi'
 ]);
 
+Route::get('/myi/share', [
+	'uses' => 'MyiController@share',
+	'as'   => 'myi.share'
+]);
 
 
 Route::controllers([
