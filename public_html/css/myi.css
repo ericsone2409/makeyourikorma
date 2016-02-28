@@ -165,9 +165,20 @@ body .center  .menu > a:hover, body .center .menu .dropdown-mine > a:hover{
 	display: none;
 	border: solid #fff 1px;
 }
+.dropdown-menu-mine li{
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
 .dropdown-menu-mine li, 
 body .center .menu{
 	padding: 0;
+}
+.dropdown-menu-mine li:hover, .dropdown-menu-mine li:hover{
+	background: rgba(0,0,0,0.4);
+}
+.dropdown-menu-mine li a:hover, .dropdown-menu-mine li a:active{
+	text-decoration: none;
 }
 body .center .menu li{
 	list-style: none;

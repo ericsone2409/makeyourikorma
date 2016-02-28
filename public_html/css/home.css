@@ -27,11 +27,11 @@ body footer .copy{
 	color: rgb(175,175,175);
 	display: inline-block;
 	position: relative;
+	top: 8px;
 }
 body footer .copy p{
 	display: inline-block;
 	color: #000;
-	
 }
 body footer .social{
 	float: right;
@@ -46,6 +46,18 @@ body footer .social{
 .social span i:last-child{
 	color: rgb(215,204,190);
 }
+body header .lista{
+	background: rgba(255,255,255,.5);
+}
+.navbar-default .navbar-nav > li > a{
+	color: #000;
+	font-size: 2em;
+	font-weight: bold;
+}
+.navbar-mine{
+	border:none;
+	background: transparent;
+}
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 	.social span{
@@ -54,9 +66,18 @@ body footer .social{
 	body footer .copy{
 		font-size: 14px;
 		margin-left: 5%;
+		top: 13px;
 	}
 	body footer .social{
 		margin-right: 6%;
+	}
+	body header .lista{
+		background: transparent;
+	}
+	.navbar-default .navbar-nav > li > a{
+		color: #b8b8b8;
+		font-size: 1.5em;
+		font-weight: normal;
 	}
 }
 
@@ -74,7 +95,7 @@ body footer .social{
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
 	body footer .copy{
-		top: 5px;
+		top: 17px;
 	}
 	body footer .social{
 		margin-top: 5px;

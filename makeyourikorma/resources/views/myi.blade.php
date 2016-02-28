@@ -7,6 +7,10 @@
 	<link rel="stylesheet" href="{{ asset('css/myi.css') }}">
 @endsection
 
+@section('logo')
+	<img class="img-responsive" src="{{ asset('img/myi/logo.png') }}">
+@endsection
+
 @section('body')
 <script>
 function ejecutar (e) {

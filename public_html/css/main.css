@@ -102,7 +102,7 @@
 }
 .navbar-default .navbar-header{
 	height: 100px;
-}
+}	
 /*PERSONAL*/
 body header .lista{
 	position: fixed;
@@ -111,6 +111,7 @@ body header .lista{
 	padding: 0;
 	background: rgb(79,79,79);
 	z-index: 10;
+	overflow: hidden;
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {

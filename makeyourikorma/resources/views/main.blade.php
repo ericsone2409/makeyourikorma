@@ -6,12 +6,13 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-	@yield('head')
 	<link rel="stylesheet" href="{{ asset('css/main.css') }}">
+	@yield('head')
 </head>
 <body>
+	@yield('start-body')
 	<header>
-		<nav class="navbar navbar-default">
+		<nav class="navbar-mine navbar navbar-default">
 			<div class="container-fluid">
 		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
@@ -22,7 +23,7 @@
 		        <span class="icon-bar"></span>
 		      </button>
 		      <a id="logo" class="navbar-brand" href="#">
-		      	<img class="img-responsive" src="{{ asset('img/myi/logo.png') }}">
+		      	@yield('logo')
 		      </a>
 		    </div>
 
