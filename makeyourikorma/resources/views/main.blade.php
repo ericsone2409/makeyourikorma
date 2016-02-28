@@ -37,13 +37,13 @@
 						<p class="segundo" id="segundo">IKORMA</p>
 					</div>
 		        </a></li>
-		        <li><a href="#" class="top-margin">
+		        <li class="disabled"><a href="#" class="top-margin">
 		        	<div class="compact">
 						<p class="primero" id="ampms">IKORMA</p>
 						<p class="segundo" id="segundo">UNIVERSE</p>
 					</div>
 		        </a></li>
-		        <li><a class="centrar" href="#">CONTACT</a></li>
+		        <li class="disabled"><a class="centrar" href="#">CONTACT</a></li>
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
