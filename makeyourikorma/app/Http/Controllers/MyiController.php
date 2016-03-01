@@ -78,8 +78,8 @@ class MyiController extends Controller {
 
 		$marco = $dir . "\\public_html\\myi-app\\marco-negro-grande.png";
 		
-		$img = Image::canvas(540, 540, $dir . "\\public_html\\myi-app\\background.png")
-			->insert($imgData, '20', '20')
+		$img = Image::canvas(540, 540, "#fff")
+			->insert($imgData, 'top-left', 20, 20)
 			->insert($marco, '0', '0');
 
 		$new = Ikorma::create(array(
