@@ -18,17 +18,31 @@ Route::get('/', [
 ]);
 
 //TURA PARA EL MYI
-Route::get('MYI', [
+Route::get('/myi', [
 	'uses' => 'MyiController@index',
 	'as'   => 'myi'
 ]);
 
+Route::any('/myi/share/{id}', [
+	'uses' => 'MyiController@share',
+	'as'   => 'myi.share'
+]);
 
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+
+Route::post('/myi/save', [
+	'uses' => 'MyiController@saveImage',
+	'as'   => 'myi-save'
+]);
+
+
+Route::any('/myi/show/{id}', 'MyiController@seeImage');
+Route::any('/myi/download/{id}', 'MyiController@downloadImage');
 
 //RUTAS PARA EL INICIO DE SESION CON FACE
 

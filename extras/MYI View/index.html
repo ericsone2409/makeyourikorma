@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="componetns/perfectscroll/css/perfect-scrollbar.css">
 	<link rel="stylesheet" href="css/estilos.css">
 	<link rel="stylesheet" href="css/estilos_navbar.css">
 </head>
@@ -21,7 +22,7 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand" href="#">
+		      <a id="logo" class="navbar-brand" href="#">
 		      	<img class="img-responsive" src="img/logo.png">
 		      </a>
 		    </div>
@@ -50,49 +51,50 @@
 	</header>
 
 	<div class="center">
-		<div class="gaveta">
-		</div>
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-xs-12 col-lg-2">
 					<ul class="menu">
-						<a href="#" id="shapes-img"><img class="img-responsive" src="img/shapes.png"></a>
+						<div class="dropdown-mine">
+						    <!-- trigger button -->
+							<a href="#" id="shapes-img"><img class="img-responsive" src="img/shapes.png"></a>
+
+						    <!-- dropdown menu -->
+						    <ul id="dropdown-menu-mine" class="dropdown-menu-mine">
+						        <li><a id="shapes" href="#">shapes</a></li>
+						        <li><a id="facials" href="#">facials</a></li>						        
+						    </ul>
+						</div>
 						<a href="#" id="colors"><img class="img-responsive" src="img/colors.png"></a>
 						<a href="#" id="layers"><img class="img-responsive" src="img/layers.png"></a>
-						<li> 
-							<a id="shapes" class="not-show" href="#">Shapes</a>
-						</li>
-						<li>
-							<a id="facials" class="not-show fix" href="#">Facials</a>
-						</li>
 					</ul>
 				</div>
 				<div class="canvas-container col-xs-12 col-lg-9">
 					<div id="shapes-container" class="shapes-container">
-						<p>FORMAS</p>
-						<ul>
-						<!--QUITAR-->
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-						</ul>
+						<p>shapes</p>
+							<ul>
+							<!--QUITAR-->
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>	
 					</div>
 					<div id="facials-container" class="shapes-container">
 						<p>FACIALS</p>
@@ -206,16 +208,15 @@
 					</span>
 				</a>
 			</div>
-		</div>
-		
+		</div>	
 	</footer>
 	
 
 
 
-
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src='componetns/perfectscroll/js/perfect-scrollbar.jquery.js'></script>
+	<script type="text/javascript" src="componetns/iscroll/build/iscroll.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
 </body>
-</html>
