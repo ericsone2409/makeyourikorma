@@ -74,9 +74,16 @@ class MyiController extends Controller {
 		$imgData = substr($imgData,strpos($imgData,",")+1);
 		$imgData = base64_decode($imgData);
 
+		$dir = dirname(dirname(dirname(dirname(__DIR__))));
+
+		$marco = $dir . "\\public_html\\myi-app\\marco-negro-grande.png";
+		
+		$img = Image::canvas(540, 540, $dir . "\\public_html\\myi-app\\background.png")
+			->insert($imgData, '20', '20')
+			->insert($marco, '0', '0');
 
 		$new = Ikorma::create(array(
-			'data' => $imgData
+			'data' => $img->encode('jpg')
 		));
 
 

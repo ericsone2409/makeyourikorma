@@ -114,6 +114,14 @@ App.init.addFunction(function (arg) {
 		e.preventDefault();
 	});
 
+
+
+	$(App.mainMenu.buttons._delete).click(function() {
+		canvasController.fabricRef.clear();
+
+
+	});
+
 }, [App.mainMenu, App.canvasController] );
 
 
