@@ -5,7 +5,8 @@ body{
 	-moz-box-sizing: border-box;
 	-o-box-sizing: border-box;
 	background: rgb(79,79,79);
-	min-width: 500px;
+	min-width: 610px;
+	overflow: auto;
 }
 .overflow-hidden{
 	overflow: hidden;
@@ -226,6 +227,7 @@ body .center .canvas-container{
 	/*background: rgb(196,196,196) url("../img/myi/fondo.png") repeat;*/
 	background: #fff;
 	padding: 15px 0;
+	height: 550px;
 }
 body .center .canvas-container:after
 {
@@ -330,7 +332,28 @@ body footer .social{
 .main-options{
 	text-align: center;
 }
+#responsive-canvas-container
+{
+	width:540px;
+	height: 540px;
+	position: absolute;
+	padding:0;
+	margin:0;
+	left:50%;
+	top:50%;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-o-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+	/*background:url(../myi-app/marco-negro-grande.png);*/
+	padding:20px;
+}
 
+
+#dropdown-menu-mine a 
+{
+	margin-left:0;
+}
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
 	body .center .canvas-container{
@@ -473,25 +496,3 @@ body footer .social{
 
 
 
-#responsive-canvas-container
-{
-	width:540px;
-	height: 540px;
-	position: absolute;
-	padding:0;
-	margin:0;
-	left:50%;
-	top:50%;
-	-webkit-transform: translateX(-50%) translateY(-50%);
-	-ms-transform: translateX(-50%) translateY(-50%);
-	-o-transform: translateX(-50%) translateY(-50%);
-	transform: translateX(-50%) translateY(-50%);
-	/*background:url(../myi-app/marco-negro-grande.png);*/
-	padding:20px;
-}
-
-
-#dropdown-menu-mine a 
-{
-	margin-left:0;
-}

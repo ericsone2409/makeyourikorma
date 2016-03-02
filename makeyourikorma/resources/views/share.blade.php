@@ -5,7 +5,6 @@
 @section('head')
 	<link rel="stylesheet" href="{{ asset('plugins/perfectscroll/css/perfect-scrollbar.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/myi.css') }}">
-	<link rel="stylesheet" href="{{ asset('css/myi-share.css') }}">
 @endsection
 
 @section('logo')
