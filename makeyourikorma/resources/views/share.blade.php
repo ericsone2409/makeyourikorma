@@ -5,6 +5,7 @@
 @section('head')
 	<link rel="stylesheet" href="{{ asset('plugins/perfectscroll/css/perfect-scrollbar.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/myi.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/myi-share.css') }}">
 @endsection
 
 @section('logo')
@@ -18,38 +19,44 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-xs-12 col-lg-2">
-					<ul class="menu">
-						<div class="dropdown-mine">
-						    <!-- trigger button -->
-							<a href="#" id="shapes-img"><img class="img-responsive" src="{{ asset('img/myi/shapes.png') }}"></a>
+					<ul class="menu" id="creation-menu">
+						<div class="main-options">
+							<a href="#" id="shapes-img" class="option" data-shows="#dropdown-menu-mine">
+								<img class="img-responsive img-center" src="{{ asset('img/myi/shapes.png') }}">
+							</a>
 
-						    <!-- dropdown menu -->
-						    <ul id="dropdown-menu-mine" class="dropdown-menu-mine">
-						        <li><a id="shapes" href="#">shapes</a></li>
-						        <li><a id="facials" href="#">facials</a></li>						        
+							<a href="#" id="colors" class="option" data-shows="#colors-container">
+								<img class="img-responsive img-center" src="{{ asset('img/myi/colors.png') }}">
+							</a>
+							<a href="#" id="layers" class="option" data-shows="#layers-container" data-load-layers="true">
+								<img class="img-responsive img-center" src="{{ asset('img/myi/layers.png') }}">
+							</a>
+						</div>
+						<div class="dropdown-mine">
+						    <ul id="dropdown-menu-mine" class="dropdown-menu-mine menu-slider-target">
+						        <li><a id="shapes" class="trigger-toggle-slider" data-shows="#shapes-container" href="#">shapes</a></li>
+						        <li><a id="facials" class="trigger-toggle-slider" data-shows="#facials-container" href="#">facials</a></li>						        
 						    </ul>
 						</div>
-						<a href="#" id="colors"><img class="img-responsive" src="{{ asset('img/myi/colors.png') }}"></a>
-						<a href="#" id="layers"><img class="img-responsive" src="{{ asset('img/myi/layers.png') }}"></a>
 					</ul>
 				</div>
 				<div class="canvas-container col-xs-12 col-lg-9">
-					<div id="shapes-container" class="shapes-container">
+					<div id="shapes-container" class="shapes-container menu-slider-target">
 						<p>shapes</p>
 						<ul>
 						</ul>	
 					</div>
-					<div id="facials-container" class="shapes-container">
+					<div id="facials-container" class="shapes-container menu-slider-target">
 						<p>FACIALS</p>
 						<ul>
 						</ul>
 					</div>
-					<div id="colors-container" class="colors-container">
+					<div id="colors-container" class="colors-container menu-slider-target">
 						<p>COLORS</p>
 						<ul class="colors">
 						</ul>
 					</div>
-					<div id="layers-container" class="layers-container">
+					<div id="layers-container" class="layers-container menu-slider-target">
 						<p>layers</p>
 						<ul class="layers">
 						</ul>

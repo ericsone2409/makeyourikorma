@@ -5,7 +5,10 @@ body{
 	-moz-box-sizing: border-box;
 	-o-box-sizing: border-box;
 	background: rgb(79,79,79);
-	z-index: 300;
+	min-width: 500px;
+}
+.overflow-hidden{
+	overflow: hidden;
 }
 .shapes-container{
 	position: fixed;
@@ -31,9 +34,6 @@ body{
 	background-repeat:no-repeat;
 	background-position:center center;
 	background-color:#fff;
-	
-	/*QUITAR*/
-	background-image: url("../img/uniques/1/1.png");
 
 	min-width:100px;
 	min-height: 100px;
@@ -75,8 +75,6 @@ body{
 	margin:2px;
 	border:1px solid rgb(255,255,255);
 
-	/*QUITAR*/
-	background: navy;
 }
 .layers-container{
 	position: fixed;
@@ -127,7 +125,7 @@ body{
 .layers-container ul > li > .img-container:after
 {
 	content: ' ';
-	padding-top:40px;
+	
 	display:block;
 }
 .layers-container ul > li > i{
@@ -154,7 +152,7 @@ body{
 	right: 0;
 }
 body .center  .menu a, body .dropdown-mine > a{
-	display: inline-block;
+	display: inline;
 	width:100%;
 	text-align: center;
 	-webkit-transition: all 0.3s ease;
@@ -225,7 +223,8 @@ body .center .menu li a{
 }
 body .center .canvas-container{
 	position: relative;
-	background: rgb(196,196,196) url("../img/myi/fondo.png") repeat;
+	/*background: rgb(196,196,196) url("../img/myi/fondo.png") repeat;*/
+	background: #fff;
 	padding: 15px 0;
 }
 body .center .canvas-container:after
@@ -322,19 +321,23 @@ body footer .social{
 .social span i:last-child{
 	color: rgb(79,79,79);
 }
+.img-center{
+	width: 30%;
+	display: inline-block;
+	max-width: 116px;
+	margin: 0 1%;
+}
+.main-options{
+	text-align: center;
+}
+
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
-	body .center .menu a{
-		width: 30%;
-	}
 	body .center .canvas-container{
 		text-align: center;
 	}
 	body .center canvas#draw-canvas{
 		margin-left: 0;
-	}
-	body .center .menu{
-		padding-left: 15%;
 	}
 	body .center{
 		padding: 0 10px;
@@ -366,6 +369,9 @@ body footer .social{
 	}
 	.shapes-container{
 		height: calc(100% - 178px);
+	}
+	.img-center{
+		margin: 0 5%;
 	}
 }
 
@@ -454,6 +460,13 @@ body footer .social{
 		width: 28%;
 		height: 100%;
 	}
+	.img-center{
+		width: auto;
+		display: block;
+		
+		
+	}
+	
 }
 
 
@@ -473,7 +486,7 @@ body footer .social{
 	-ms-transform: translateX(-50%) translateY(-50%);
 	-o-transform: translateX(-50%) translateY(-50%);
 	transform: translateX(-50%) translateY(-50%);
-	background:url(../myi-app/marco-negro-grande.png);
+	/*background:url(../myi-app/marco-negro-grande.png);*/
 	padding:20px;
 }
 

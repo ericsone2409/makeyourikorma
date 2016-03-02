@@ -8,7 +8,7 @@
 @endsection
 
 @section('logo')
-	<img class="img-responsive" src="{{ asset('img/myi/logo.png') }}">
+	<img id="logo"  class="img-responsive" src="{{ asset('img/myi/logo.png') }}">
 @endsection
 
 @section('body')
@@ -40,14 +40,14 @@ window.fbAsyncInit = function() {
 					<ul class="menu" id="creation-menu">
 						<div class="main-options">
 							<a href="#" id="shapes-img" class="option" data-shows="#dropdown-menu-mine">
-								<img class="img-responsive" src="{{ asset('img/myi/shapes.png') }}">
+								<img class="img-responsive img-center" src="{{ asset('img/myi/shapes.png') }}">
 							</a>
 
 							<a href="#" id="colors" class="option" data-shows="#colors-container">
-								<img class="img-responsive" src="{{ asset('img/myi/colors.png') }}">
+								<img class="img-responsive img-center" src="{{ asset('img/myi/colors.png') }}">
 							</a>
 							<a href="#" id="layers" class="option" data-shows="#layers-container" data-load-layers="true">
-								<img class="img-responsive" src="{{ asset('img/myi/layers.png') }}">
+								<img class="img-responsive img-center" src="{{ asset('img/myi/layers.png') }}">
 							</a>
 						</div>
 						<div class="dropdown-mine">
@@ -106,7 +106,7 @@ window.fbAsyncInit = function() {
 						</div>
 					</a>
 					<div id="responsive-canvas-container">
-						<canvas width="500" height="500" id="draw-canvas" data-background="{{ asset('myi-app/background.png') }}"></canvas>
+						<canvas width="450" height="450" id="draw-canvas" data-background="{{ asset('myi-app/background.png') }}"></canvas>
 					</div>
 				</div>
 			</div>
@@ -144,7 +144,7 @@ window.fbAsyncInit = function() {
 
 @section('scripts')
 	<script src="{{ asset('plugins/perfectscroll/js/perfect-scrollbar.jquery.js') }}"></script>
-	<!--<script src="{{ asset('js/myi.js') }}"></script>-->
+	<script src="{{ asset('js/myi.js') }}"></script>
 	<!-- Fabric.js -->
 	<script src="{{ asset('components/fabric.js/dist/fabric.min.js') }}"></script>
 
