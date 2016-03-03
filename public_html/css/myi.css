@@ -170,25 +170,28 @@ body .center  .menu a:hover, .dropdown-mine > a:hover{
 .dropdown-menu-mine
 {
 	width: 20%;
-	min-width:300px;
-	position: fixed;
-	right: -100%;
+	min-width:250px;
+	position: absolute;
+	left:0;
 	z-index: 2;
-	height:100%;
-	top:0;
+	height:auto;
+	top:70px;
 	background: rgb(79,79,79);
 	padding: 0;
 	border: solid #fff 1px;
 	-webkit-transition: all 0.3s ease;
 	-o-transition: all 0.3s ease;
 	transition: all 0.3s ease;
+	opacity: 0;
+	visibility: hidden;
 }
 .dropdown-menu-mine.show
 {
-	right:0;
+	opacity: 1;
 	-webkit-transition: all 0.3s ease;
 	-o-transition: all 0.3s ease;
 	transition: all 0.3s ease;
+	visibility: visible;
 }
 .dropdown-menu-mine li {
 	-webkit-transition: all 0.3s ease;
@@ -388,10 +391,10 @@ body footer .social{
 	}
 	.colors-container, .layers-container{
 		width: 35%;
-		height: calc(100% - 178px);
+		height: calc(100% - 170px);
 	}
 	.shapes-container{
-		height: calc(100% - 178px);
+		height: calc(100% - 170px);
 	}
 	.img-center{
 		margin: 0 5%;
@@ -486,8 +489,11 @@ body footer .social{
 	.img-center{
 		width: auto;
 		display: block;
-		
-		
+	}
+	.dropdown-menu-mine
+	{
+		left: 0;
+		top:0;
 	}
 	
 }
