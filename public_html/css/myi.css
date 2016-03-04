@@ -34,7 +34,7 @@ body{
 	background-size: contain;
 	background-repeat:no-repeat;
 	background-position:center center;
-	background-color:#fff;
+	background-color:#ECECEC;
 
 	min-width:100px;
 	min-height: 100px;
@@ -67,13 +67,17 @@ body{
 .colors-container ul{
 	margin: 0;
 	padding: 0;
+	width:100%;
+	height: auto;
 }
 .colors-container ul > li{
 	list-style: none;
-	width:20px;
-	height:20px;
+	width:20%;
+	width:calc(20% - 10px);
+	padding-top:20%;
+	padding-top: calc(20% - 10px);
 	display:inline-block;
-	margin:2px;
+	margin:5px;
 	border:1px solid rgb(255,255,255);
 
 }
@@ -121,14 +125,10 @@ body{
 	background-size: contain;
 	background-repeat: no-repeat;
 	border:1px solid #909090;
+	height: 40px;
 
 }
-.layers-container ul > li > .img-container:after
-{
-	content: ' ';
-	
-	display:block;
-}
+
 .layers-container ul > li > i{
 	float:right;
 	margin-right:5px;
@@ -231,6 +231,8 @@ body .center .canvas-container{
 	background: #fff;
 	padding: 15px 0;
 	height: 550px;
+
+	background:#b8b8b8;
 }
 body .center .canvas-container:after
 {
@@ -337,10 +339,9 @@ body footer .social{
 }
 #responsive-canvas-container
 {
-	width:540px;
-	height: 540px;
+	width:490px;
+	height: 490px;
 	position: absolute;
-	padding:0;
 	margin:0;
 	left:50%;
 	top:50%;
@@ -348,7 +349,7 @@ body footer .social{
 	-ms-transform: translateX(-50%) translateY(-50%);
 	-o-transform: translateX(-50%) translateY(-50%);
 	transform: translateX(-50%) translateY(-50%);
-	/*background:url(../myi-app/marco-negro-grande.png);*/
+	background:url(../myi-app/marco-negro-grande.png);
 	padding:20px;
 }
 
@@ -492,7 +493,7 @@ body footer .social{
 	}
 	.dropdown-menu-mine
 	{
-		left: 0;
+		left: 85%;
 		top:0;
 	}
 	
@@ -500,5 +501,19 @@ body footer .social{
 
 
 
+.center-hv
+{
+	position: absolute;
+	left:50%;
+	top:50%;
+	-webkit-transform: translateY(-50%) translateX(-50%);
+	-ms-transform: translateY(-50%) translateX(-50%);
+	-o-transform: translateY(-50%) translateX(-50%);
+	transform: translateY(-50%) translateX(-50%);
+}
 
-
+.colors-wrapper
+{
+	width:100%;
+	height:auto;
+}

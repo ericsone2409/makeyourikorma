@@ -71,8 +71,9 @@ window.fbAsyncInit = function() {
 					</div>
 					<div id="colors-container" class="colors-container menu-slider-target">
 						<p>COLORS</p>
-						<ul class="colors">
-						</ul>
+						<div class="colors-wrapper center-hv">
+							<ul class="colors center-hv"></ul>
+						</div>
 					</div>
 					<div id="layers-container" class="layers-container menu-slider-target">
 						<p>layers</p>

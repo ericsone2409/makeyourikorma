@@ -162,8 +162,13 @@ App.init.addFunction(function(arg) {
 	});
 
 	$.each(variants, function(index, value) {
+		var max = value.variantes.length - 1;
+		var i = Math.floor((Math.random() * max) + 0);
+
+
+		var objeto = this.variantes[i];
 		$('#shapes-container > ul').append(
-			'<li data-url="'+ this.ruta+'" data-index="'+index+'" style="background-image:url(' + this.ruta + ')"></li>'
+			'<li data-url="'+ objeto.route +'" data-index="'+index+'" style="background-image:url(' + objeto.route + ')"></li>'
 		);
 
 	});

@@ -78,7 +78,7 @@ class MyiController extends Controller {
 
 		$marco = $dir . "\\public_html\\myi-app\\marco-negro-grande.png";
 		
-		$img = Image::canvas(540, 540, "#fff")
+		$img = Image::canvas(490, 490, "#fff")
 			->insert($imgData, 'top-left', 20, 20)
 			->insert($marco, '0', '0');
 
