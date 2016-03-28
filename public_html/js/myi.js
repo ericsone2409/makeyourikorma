@@ -5,8 +5,8 @@ $(document).ready(function() {
 		event.preventDefault();
 	});
 
-	$(".canvas-container > div").perfectScrollbar();
-	$(".canvas-container > div").perfectScrollbar('update'); 
+	$(".canvas-container > div:not('#responsive-canvas-container')").perfectScrollbar();
+	$(".canvas-container > div:not('#responsive-canvas-container')").perfectScrollbar('update'); 
 
 
 

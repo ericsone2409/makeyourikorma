@@ -11,21 +11,48 @@ body{
 .overflow-hidden{
 	overflow: hidden;
 }
-.shapes-container{
-	position: fixed;
+.allshapes-container{
+	position: absolute;
+	/*
 	width: 100%;
 	height: calc(100% - 102px);
+	*/
 	-webkit-transition: all 0.3s ease;
 	-o-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 	background: rgb(107,107,107);
-	margin-top: -15px;
 	z-index: 1;
-	right: -200%;
-	bottom: 0;
 	overflow-y: auto;
+	left: 0;
+	top: 0;
+	padding: 10px;
+	display: none;
 }
-.shapes-container ul > li{
+.allshapes-container.show{
+	display: initial;
+}
+
+.allshapes-options{
+	border: solid #fff 1px;
+	padding-right: 5px;
+	padding-left: 5px;
+	padding-top: 5px;
+	margin-bottom: 25px;
+}
+.allshapes-options > li{
+	display: inline-block;
+}
+.allshapes-options > li.selected{
+	border: solid #000 1px;
+}
+
+.allshapes-ul{
+	width: 100%;
+	height: 200px; /*ESTILO DE PRUEBA*/
+	border: solid #fff 1px;
+}
+
+.allshapes-ul > li{
 	width:calc(20% - 10px);
 	padding-bottom:calc(20% - 10px);
 	margin:1px;
@@ -40,16 +67,14 @@ body{
 	min-height: 100px;
 
 }
-.shapes-container p, .colors-container p, .layers-container p{
+.allshapes-container > h4{
 	font-family: "ikorma";
-	text-align: center;
 	font-size: bold;
 	color: #fff;
-	font-size: 1.3em;
-	border-bottom: solid 1.5px; 
+	margin-top: 5px;
 
 }
-.colors-container{
+/*.colors-container{
 	position: fixed;
 	width: 40%;
 	height: 100%;
@@ -63,25 +88,25 @@ body{
 	transition: all 0.3s ease;
 	padding: 0 5px;
 	text-align: left;
-}
-.colors-container ul{
+}*/
+#colors-container ul{
 	margin: 0;
 	padding: 0;
 	width:100%;
 	height: auto;
 }
-.colors-container ul > li{
+#colors-container ul > li{
 	list-style: none;
 	width:20%;
 	width:calc(20% - 10px);
 	padding-top:20%;
 	padding-top: calc(20% - 10px);
 	display:inline-block;
-	margin:5px;
+	margin:3.5px;
 	border:1px solid rgb(255,255,255);
 
 }
-.layers-container{
+/*.layers-container{
 	position: fixed;
 	width: 40%;
 	height: 100%;
@@ -95,13 +120,13 @@ body{
 	transition: all 0.3s ease;
 	padding: 0 5px;
 	overflow-y: auto; 
-}
-.layers-container ul{
+}*/
+#layers-container ul{
 	padding:0;
 	width:100%;
 	border: solid rgb(160,160,160) 1.5px;
 }
-.layers-container ul > li{
+#layers-container ul > li{
 	list-style: none;
 	font-family: "ikorma";
 	color: #fff;
@@ -116,7 +141,7 @@ body{
 	background-size: contain;
 	margin-bottom: 10px;
 }
-.layers-container ul > li > .img-container{
+#layers-container ul > li > .img-container{
 
 	width:40px;
 	float:left;
@@ -129,14 +154,14 @@ body{
 
 }
 
-.layers-container ul > li > i{
+#layers-container ul > li > span{
 	float:right;
-	margin-right:5px;
+	margin-left:30px;
 	font-size:1.2em;
 	line-height: 40px;
 	color: rgb(79,79,79);
 }
-.layers-container ul > li > p{
+#layers-container ul > li > p{
 	font-family: "ikorma";
 	color: #fff;
 	position:absolute;
@@ -148,11 +173,7 @@ body{
 	font-size:0.9em;
 	border: none;
 }
-
-.show{
-	right: 0;
-}
-body .center  .menu a, body .dropdown-mine > a{
+body .center  .menu a{
 	display: inline;
 	width:100%;
 	text-align: center;
@@ -161,53 +182,8 @@ body .center  .menu a, body .dropdown-mine > a{
 	transition: all 0.3s ease;
 	opacity: 0.75;
 }
-body .center  .menu a:hover, .dropdown-mine > a:hover{
+body .center  .menu a:hover{
 	opacity: 1;
-}
-.dropdown-mine{
-	display: inline;
-}
-.dropdown-menu-mine
-{
-	width: 20%;
-	min-width:250px;
-	position: absolute;
-	left:0;
-	z-index: 2;
-	height:auto;
-	top:70px;
-	background: rgb(79,79,79);
-	padding: 0;
-	border: solid #fff 1px;
-	-webkit-transition: all 0.3s ease;
-	-o-transition: all 0.3s ease;
-	transition: all 0.3s ease;
-	opacity: 0;
-	visibility: hidden;
-}
-.dropdown-menu-mine.show
-{
-	opacity: 1;
-	-webkit-transition: all 0.3s ease;
-	-o-transition: all 0.3s ease;
-	transition: all 0.3s ease;
-	visibility: visible;
-}
-.dropdown-menu-mine li {
-	-webkit-transition: all 0.3s ease;
-	-o-transition: all 0.3s ease;
-	transition: all 0.3s ease;
-	width:100%;
-}
-.dropdown-menu-mine li, 
-body .center .menu{
-	padding: 0;
-}
-.dropdown-menu-mine li:hover, .dropdown-menu-mine li:hover{
-	background: rgba(0,0,0,0.4);
-}
-.dropdown-menu-mine li a:hover, .dropdown-menu-mine li a:active{
-	text-decoration: none;
 }
 body .center .menu li{
 	list-style: none;
@@ -290,6 +266,24 @@ body .center .canvas-container .delete{
 .send{
 	top: 140px;
 }
+.direction-container{
+	position: absolute;
+	bottom: 25%;
+	right: 0;
+	padding: 5px;
+	background: rgb(79,79,79);
+	padding-right: 0;
+}
+.direction-container > div{
+	border: solid rgb(150,150,150) 1px;
+	background: rgb(79,79,79);
+	padding-right: 13px;
+	padding-bottom: 13px;
+
+}
+.direction-container > div > a{
+	display: block;
+}
 body .center canvas#draw-canvas{
 	background: #fff;
 
@@ -352,12 +346,6 @@ body footer .social{
 	background:url(../myi-app/marco-negro-grande.png);
 	padding:20px;
 }
-
-
-#dropdown-menu-mine a 
-{
-	margin-left:0;
-}
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
 	body .center .canvas-container{
@@ -390,13 +378,13 @@ body footer .social{
 		margin-bottom: 18px;
 		font-size: 1.5em;
 	}
-	.colors-container, .layers-container{
+	/*.colors-container, .layers-container{
 		width: 35%;
 		height: calc(100% - 170px);
 	}
 	.shapes-container{
 		height: calc(100% - 170px);
-	}
+	}*/
 	.img-center{
 		margin: 0 5%;
 	}
@@ -475,28 +463,24 @@ body footer .social{
 		display: block;
 		margin-left: 20%;
 	}
-	.dropdown-mine{
-		display: inline;
-	}
-
-	.shapes-container{
+	/*.shapes-container{
 		width: 83.33333333%;
 		height: calc(100% - 102px);
 	}
 	.colors-container, .layers-container{
 		width: 28%;
 		height: 100%;
-	}
+	}*/
 	.img-center{
 		width: auto;
 		display: block;
 	}
-	.dropdown-menu-mine
-	{
-		left: 85%;
-		top:0;
+	.allshapes-container.center{
+		top: 130px;
 	}
-	
+	.allshapes-container.bottom{
+		top: 260px;
+	}
 }
 
 

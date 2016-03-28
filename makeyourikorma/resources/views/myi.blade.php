@@ -50,15 +50,18 @@ window.fbAsyncInit = function() {
 								<img class="img-responsive img-center" src="{{ asset('img/myi/layers.png') }}">
 							</a>
 						</div>
+						<!--
 						<div class="dropdown-mine">
 						    <ul id="dropdown-menu-mine" class="dropdown-menu-mine menu-slider-target">
 						        <li><a id="shapes" class="trigger-toggle-slider" data-shows="#shapes-container" href="#">shapes</a></li>
 						        <li><a id="facials" class="trigger-toggle-slider" data-shows="#facials-container" href="#">facials</a></li>						        
 						    </ul>
 						</div>
+						-->
 					</ul>
 				</div>
 				<div class="canvas-container col-xs-12 col-lg-9">
+					<!--
 					<div id="shapes-container" class="shapes-container menu-slider-target">
 						<p>shapes</p>
 						<ul>
@@ -69,15 +72,33 @@ window.fbAsyncInit = function() {
 						<ul>
 						</ul>
 					</div>
-					<div id="colors-container" class="colors-container menu-slider-target">
-						<p>COLORS</p>
-						<div class="colors-wrapper center-hv">
-							<ul class="colors center-hv"></ul>
+					-->
+					<div id="allshapes-container" class="allshapes-container">
+						<h4>NOSE</h4>
+						<ul class="allshapes-options">
+							<li><a href="#"><img class="img-responsive" src="{{ asset('img/myi/boton1.png') }}" alt=""></a></li>
+							<li><a href="#"><img class="img-responsive" src="{{ asset('img/myi/boton2.png') }}" alt=""></a></li>
+							<li><a href="#"><img class="img-responsive" src="{{ asset('img/myi/boton3.png') }}" alt=""></a></li>
+							<li class="selected"><a href="#"><img class="img-responsive" src="{{ asset('img/myi/boton4.png') }}" alt=""></a></li>
+						</ul>
+						<ul class="allshapes-ul"></ul>
+					</div>
+					<div id="colors-container" class="allshapes-container center menu-slider-target">
+						<h4>COLORS</h4>
+						<div class="colors-wrapper">
+							<ul class="colors"></ul>
 						</div>
 					</div>
-					<div id="layers-container" class="layers-container menu-slider-target">
-						<p>layers</p>
+		
+					<div id="layers-container" class="allshapes-container bottom menu-slider-target">
+						<h4>layers</h4>
 						<ul class="layers">
+						<!--ESTE ES UN LAYER DE PRUEBA-->
+							<li>
+								<div style="background-image:url({{ asset('img/1/1.1.png') }});" class="img-container"></div>
+								<span class="fa fa-trash-o">
+								</span><span class="layer-name">Layer 1</span>
+							</li>
 						</ul>
 					</div>
 					<a href="#" title="Download" class="download" id="download" data-url="{{ url('myi/save') }}">
@@ -98,6 +119,12 @@ window.fbAsyncInit = function() {
 							<i class="fa fa-send fa-stack-1x"></i>
 						</span>
 					</a>
+					<div class="direction-container">
+						<div>
+							<a href="#"><img class="img-responsive" src="{{ asset('img/myi/vertical.png') }}" alt=""></a>
+							<a href="#"><img class="img-responsive" src="{{ asset('img/myi/horizontal.png') }}" alt=""></a>
+						</div>
+					</div>
 					<a href="#" title="Delete" class="delete" id="delete">
 						<div>
 							<span class="fa-stack fa-lg">
