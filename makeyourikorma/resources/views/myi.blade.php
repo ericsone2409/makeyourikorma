@@ -2,6 +2,10 @@
 
 @section('title', 'Make Your Ikorma')
 
+@section('meta:vp')
+	<meta name="viewport" content="user-scalable=no, initial-scale=auto">
+@endsection
+
 @section('head')
 	<link rel="stylesheet" href="{{ asset('plugins/perfectscroll/css/perfect-scrollbar.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/myi.css') }}">

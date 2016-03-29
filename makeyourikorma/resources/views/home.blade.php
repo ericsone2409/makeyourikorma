@@ -6,6 +6,10 @@
 	<link rel="stylesheet" href="{{ asset('css/home.css') }}">
 @endsection
 
+@section('meta:vp')
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+@endsection
+
 @section('start-body')
 	<img class="fondo2" src="{{ asset('img/home/fondo2.png') }}">
 @endsection
