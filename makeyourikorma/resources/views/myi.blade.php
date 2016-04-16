@@ -43,7 +43,7 @@ window.fbAsyncInit = function() {
 				<div class="col-xs-12 col-lg-2">
 					<ul class="menu" id="creation-menu">
 						<div class="main-options">
-							<a href="#" id="shapes-img" class="option" data-shows="#dropdown-menu-mine">
+							<a href="#" id="shapes-img" class="option" data-shows="#allshapes-container">
 								<img class="img-responsive img-center" src="{{ asset('img/myi/shapes.png') }}">
 							</a>
 
@@ -77,16 +77,17 @@ window.fbAsyncInit = function() {
 						</ul>
 					</div>
 					-->
-					<div id="allshapes-container" class="allshapes-container">
-						<h4>NOSE</h4>
+					<div id="allshapes-container" class="allshapes-container menu-slider-target">
+						<h4>NOSE</h4><!--ESTO ES DE EJEMPLO, IGUAL QUE EL LI QUE TIENE LA CLASE SELECTED-->
 						<ul class="allshapes-options">
-							<li><a href="#"><img class="img-responsive" src="{{ asset('img/myi/boton1.png') }}" alt=""></a></li>
-							<li><a href="#"><img class="img-responsive" src="{{ asset('img/myi/boton2.png') }}" alt=""></a></li>
-							<li><a href="#"><img class="img-responsive" src="{{ asset('img/myi/boton3.png') }}" alt=""></a></li>
-							<li class="selected"><a href="#"><img class="img-responsive" src="{{ asset('img/myi/boton4.png') }}" alt=""></a></li>
+							<li  data-show="#shapes"><a href="#"><img class="img-responsive" src="{{ asset('img/myi/boton1.png') }}" alt=""></a></li>
+							<li data-show="#eyes"><a href="#" ><img class="img-responsive" src="{{ asset('img/myi/boton2.png') }}" alt=""></a></li>
+							<li data-show="#mouth"><a href="#" ><img class="img-responsive" src="{{ asset('img/myi/boton3.png') }}" alt=""></a></li>
+							<li data-show="#nose"><a href="#" ><img class="img-responsive" src="{{ asset('img/myi/boton4.png') }}" alt=""></a></li>
 						</ul>
 						<ul class="allshapes-ul"></ul>
 					</div>
+
 					<div id="colors-container" class="allshapes-container center menu-slider-target">
 						<h4>COLORS</h4>
 						<div class="colors-wrapper">
@@ -97,12 +98,12 @@ window.fbAsyncInit = function() {
 					<div id="layers-container" class="allshapes-container bottom menu-slider-target">
 						<h4>layers</h4>
 						<ul class="layers">
-						<!--ESTE ES UN LAYER DE PRUEBA-->
+						<!--ESTE ES UN LAYER DE PRUEBA
 							<li>
 								<div style="background-image:url({{ asset('img/1/1.1.png') }});" class="img-container"></div>
 								<span class="fa fa-trash-o">
 								</span><span class="layer-name">Layer 1</span>
-							</li>
+							</li>-->
 						</ul>
 					</div>
 					<a href="#" title="Download" class="download" id="download" data-url="{{ url('myi/save') }}">

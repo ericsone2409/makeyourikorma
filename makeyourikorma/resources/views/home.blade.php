@@ -2,12 +2,12 @@
 
 @section('title', 'Ikorma')
 
-@section('head')
-	<link rel="stylesheet" href="{{ asset('css/home.css') }}">
-@endsection
-
 @section('meta:vp')
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+@endsection
+
+@section('head')
+	<link rel="stylesheet" href="{{ asset('css/home.css') }}">
 @endsection
 
 @section('start-body')

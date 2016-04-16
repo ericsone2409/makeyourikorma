@@ -19,5 +19,4 @@ $(document).ready(function() {
 	}
 
 	setInterval(check, 100);
-
 });

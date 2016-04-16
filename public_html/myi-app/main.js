@@ -149,28 +149,36 @@ App.init.addFunction(function(arg) {
 	var uniques = arg[0];
 	var variants = arg[1];
 	var colors = arg[2];
-
-	console.log(colors);
-
-
+	var numero = 1;
 
 	$.each(uniques, function() {
-		$('#facials-container > ul').append(
-			'<li data-url="' + this.route + '" style="background-image:url(' + this.route + ')"></li>'
-		);
-
+		if (numero <= 13) {
+			$('.allshapes-ul').append(
+				'<li data-url="' + this.route + '" data-type=uniques id="eyes" style="background-image:url(' + this.route + ')"></li>'
+			);
+		}else {
+			$('.allshapes-ul').append(
+				'<li data-url="' + this.route + '" data-type=uniques id="mouth" style="background-image:url(' + this.route + ')"></li>'
+			);
+		}
+		numero++;
 	});
-
+	
+	numero = 1;
 	$.each(variants, function(index, value) {
 		var max = value.variantes.length - 1;
 		var i = Math.floor((Math.random() * max) + 0);
-
-
 		var objeto = this.variantes[i];
-		$('#shapes-container > ul').append(
-			'<li data-url="'+ objeto.route +'" data-index="'+index+'" style="background-image:url(' + objeto.route + ')"></li>'
-		);
-
+		if (numero<=20) {
+			$('.allshapes-ul').append(
+				'<li data-url="'+ objeto.route +'" data-type=variants id="shapes" data-index="'+index+'" style="background-image:url(' + objeto.route + ')"></li>'
+			);
+		}else {
+			$('.allshapes-ul').append(
+				'<li data-url="'+ objeto.route +'" data-type=variants id="nose" data-index="'+index+'" style="background-image:url(' + objeto.route + ')"></li>'
+			);
+		}
+		numero++;
 	});
 
 	$.each(colors, function(id, value) {
@@ -244,7 +252,7 @@ App.init.addFunction(function(arg) {
 	});
 
 
-	$(document).on('click', '#facials-container > ul > li', function() {
+	/*$(document).on('click', '.allshapes-ul > li', function() {
 		var route = $(this).attr('data-url');
 		canvasController.addImage(route, ++canvasController.layers, 'uniques', undefined, undefined, undefined, 0.1);
 		mainMenu.hideSliders();
@@ -252,15 +260,32 @@ App.init.addFunction(function(arg) {
 		mainMenu.unexpand();
 	});
 
-	$(document).on('click', '#shapes-container > ul > li', function() {
+	$(document).on('click', '.allshapes-ul > li', function() {
 		var route = $(this).attr('data-url');
 		var index = $(this).attr('data-index');
 		canvasController.addImage(route, ++canvasController.layers, 'variants', index, undefined, undefined, 0.1);
 		mainMenu.hideSliders();
 		mainMenu.unselectAllItems();
 		mainMenu.unexpand();
-	});
+	});*/
 
+	$(document).on('click', '.allshapes-ul > li', function() {
+		var type = $(this).attr('data-type');
+		if (type == 'uniques') {
+			var route = $(this).attr('data-url');
+			canvasController.addImage(route, ++canvasController.layers, 'uniques', undefined, undefined, undefined, 0.1);
+			mainMenu.hideSliders();
+			mainMenu.unselectAllItems();
+			mainMenu.unexpand();
+		}else {
+			var route = $(this).attr('data-url');
+			var index = $(this).attr('data-index');
+			canvasController.addImage(route, ++canvasController.layers, 'variants', index, undefined, undefined, 0.1);
+			mainMenu.hideSliders();
+			mainMenu.unselectAllItems();
+			mainMenu.unexpand();
+		}
+	});
 
 	canvasController.showLayers = function()
 	{
@@ -343,6 +368,16 @@ App.init.addFunction(function(arg) {
 
 /*=====  End of Canvas Routines  ======*/
 
+
+$(document).on('click', '.allshapes-options > li', function() {
+	var dshow = $(this).attr('data-show');
+
+	$('.allshapes-options > li').removeClass('selected');
+	$('.allshapes-ul > li').removeClass('show')
+
+	$(this).addClass('selected');
+	$('#' + dshow).addClass('show');
+});
 
 
 
