@@ -9,63 +9,63 @@ class colorsTableSeeder extends Seeder {
 	{
 		//1
 		\DB::table('colors')->insert(array (
-			'hex' => '#451d5c'
+			'hex' => '#660066'
 		));
 
 		//2
 		\DB::table('colors')->insert(array (
-			'hex' => '#1a1651'
+			'hex' => '#cb3398'
 		));
 
 		//3
 		\DB::table('colors')->insert(array (
-			'hex' => '#004622'
+			'hex' => '#ff99cb'
 		));
 
 		//4
 		\DB::table('colors')->insert(array (
-			'hex' => '#79101e'
+			'hex' => '#fadeec'
 		));
 
 		//5
 		\DB::table('colors')->insert(array (
-			'hex' => '#06050b'
+			'hex' => '#330065'
 		));
 
 
 		//6
 		\DB::table('colors')->insert(array (
-			'hex' => '#cd4599'
+			'hex' => '#3c51a4'
 		));
 
 		//7
 		\DB::table('colors')->insert(array (
-			'hex' => '#3c51a4'
+			'hex' => '#669acc'
 		));
 
 		//8
 		\DB::table('colors')->insert(array (
-			'hex' => '#0ba64b'
+			'hex' => '#cdffff'
 		));
 
 		//9
 		\DB::table('colors')->insert(array (
-			'hex' => '#ef2229'
+			'hex' => '#013300'
 		));
 
 		//10
 		\DB::table('colors')->insert(array (
-			'hex' => '#636466'
+			'hex' => '#019934'
 		));
 
 		//11
 		\DB::table('colors')->insert(array (
-			'hex' => '#ed8ab9'
+			'hex' => '#99cc01'
 		));
 
 		//12
 		\DB::table('colors')->insert(array (
-			'hex' => '#5fa2d9'
+			'hex' => '#ffff01'
 		));
 
 
@@ -76,27 +76,27 @@ class colorsTableSeeder extends Seeder {
 
 		//13
 		\DB::table('colors')->insert(array (
-			'hex' => '#9fcb3a'
+			'hex' => '#670001'
 		));
 
 		//14
 		\DB::table('colors')->insert(array (
-			'hex' => '#f05222'
+			'hex' => '#cc0001'
 		));
 
 		//15
 		\DB::table('colors')->insert(array (
-			'hex' => '#c7c8ca'
+			'hex' => '#ff3300'
 		));
 
 		//16
 		\DB::table('colors')->insert(array (
-			'hex' => '#fadeec'
+			'hex' => '#ff9934'
 		));
 
 		//17
 		\DB::table('colors')->insert(array (
-			'hex' => '#bae7fc'
+			'hex' => '#000000'
 		));
 
 
@@ -104,12 +104,12 @@ class colorsTableSeeder extends Seeder {
 
 		//18
 		\DB::table('colors')->insert(array (
-			'hex' => '#f5eb17'
+			'hex' => '#666666'
 		));
 
 		//19
 		\DB::table('colors')->insert(array (
-			'hex' => '#fba51e'
+			'hex' => '#cccccc'
 		));
 
 		//20

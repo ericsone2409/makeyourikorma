@@ -10,7 +10,7 @@ class UniqueImagesTableSeeder extends Seeder {
 	{
 
 		$dir = dirname(dirname(dirname(__DIR__)));
-		$dir = $dir . "\\public_html\\img\\uniques\\";
+		$dir = $dir . "\\makeyourikorma\\public\\img\\uniques\\";
 		echo "Directorio de iamgenes unicas: $dir \n";
 
 

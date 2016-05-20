@@ -58,7 +58,7 @@ class MyiController extends Controller {
 
 	public function index()
 	{
-		return view('myi', $this->getJSON());
+		return view('myii', $this->getJSON());
 	}
 
 	public function share($id)

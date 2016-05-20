@@ -3,7 +3,7 @@
 @section('title', 'Share Make Your Ikorma')
 
 @section('meta:vp')
-	<meta name="viewport" content="user-scalable=no, initial-scale=auto">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 @endsection
 
 @section('head')
@@ -101,5 +101,5 @@
 
 @section('scripts')
 	<script src="{{ asset('plugins/perfectscroll/js/perfect-scrollbar.jquery.js') }}"></script>
-	<script src="{{ asset('js/myi.js') }}"></script>
+	<script src="{{ asset('js/myi2.js') }}"></script>
 @endsection

@@ -11,7 +11,7 @@ class VariantImagesTableSeeder extends Seeder {
 
 
 		$dir = dirname(dirname(dirname(__DIR__)));
-		$dir = $dir . "\\public_html\\img\\variants\\";
+		$dir = $dir . "\\makeyourikorma\\public\\img\\variants\\";
 		echo "Directorio de iamgenes con variantes: $dir \n";
 
 
