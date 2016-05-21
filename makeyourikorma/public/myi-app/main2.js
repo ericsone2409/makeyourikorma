@@ -114,30 +114,21 @@ App.init.addFunction(function (arg) {
 	});
 	$(App.mainMenu.buttons.send).click(function(e) {
 
-		$(this).jConfirm({ 
-			message: 'By submitting this ikorma, is removed, be sure you have saved', 
-			confirm: 'send', 
-			cancel: 'cancel', 
-			openNow: this,
-			callback: function(elem){ 
-				var dataURL = App.canvasController.generateBase64();
-				App.serverInterface.saveImageResource = $(App.mainMenu.buttons.download).attr('data-url');
+		var dataURL = App.canvasController.generateBase64();
+		App.serverInterface.saveImageResource = $(App.mainMenu.buttons.download).attr('data-url');
 
-				App.serverInterface.saveImage(dataURL, function(data) {
-					var shareURL = App.serverInterface.baseURL + '/myi/share/' + data.id;
-					var imgURL   = App.serverInterface.baseURL + '/myi/show/' + data.id;
-					var sendURL = App.serverInterface.baseURL + '/myi/send/' + data.id;
+		App.serverInterface.saveImage(dataURL, function(data) {
+			var shareURL = App.serverInterface.baseURL + '/myi/share/' + data.id;
+			var imgURL   = App.serverInterface.baseURL + '/myi/show/' + data.id;
+			var sendURL = App.serverInterface.baseURL + '/myi/send/' + data.id;
 
-					window.location = sendURL;
-				
+			window.location = sendURL;
+			
 
-				});
+		});
 
 
-				e.preventDefault();
-			} 
-		}); 
-		
+		e.preventDefault();
 	});
 
 
@@ -229,8 +220,13 @@ App.init.addFunction(function(arg) {
 	var canvas = canvasController.fabricRef;
 
 	canvas.on('object:scaling', function(options) {
-		
+		if (options.target)
+		{
+			// Prevents the images to be flipped
+			options.target.flipX = false;
+			options.target.flipY = false;
 
+		}
 	});
 
 	canvas.on('mouse:down', function(options) {

@@ -28,7 +28,7 @@ return [
 	|
 	*/
 
-	'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+	'host' => env('MAIL_HOST', 'smtp.gmail.com'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -41,9 +41,10 @@ return [
 	|
 	*/
 
-	'port' => env('MAIL_PORT', 587),
+	'port' => env('MAIL_PORT', 465),
 
 	/*
+	antiguo valor de aca arriba 587
 	|--------------------------------------------------------------------------
 	| Global "From" Address
 	|--------------------------------------------------------------------------
@@ -54,7 +55,7 @@ return [
 	|
 	*/
 
-	'from' => ['address' => null, 'name' => null],
+	'from' => ['address' => 'ericsone2409@gmail.com', 'name' => 'Ericson Gonzalez'],
 
 	/*
 	|--------------------------------------------------------------------------
@@ -67,9 +68,10 @@ return [
 	|
 	*/
 
-	'encryption' => 'tls',
+	'encryption' => 'ssl',
 
 	/*
+	antiguo valor de aca arriba tls
 	|--------------------------------------------------------------------------
 	| SMTP Server Username
 	|--------------------------------------------------------------------------

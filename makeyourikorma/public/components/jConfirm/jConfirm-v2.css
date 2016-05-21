@@ -1,0 +1,50 @@
+/* jConfirm */
+#jConfirm{
+	position: absolute; z-index: 999999; background: rgb(107,107,107); color: white; padding: 10px; border: 1px solid #f3f3f3; border-radius: 5px; display: none; font-weight: bold; text-align: center; box-shadow: 4px 4px 13px #999;
+}
+#jConfirm:before,
+#jConfirm::before {
+    position: absolute;
+    top: -10px;
+    left: 10%;
+    margin-left: -8%;
+    content: '';
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid #000;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+#jConfirm.right:before,
+#jConfirm.right::before {
+	right: 10%;
+	left: auto;
+}
+#jConfirm .jYup{
+	background: rgb(79,79,79); border-color: #518f1f;
+}
+#jConfirm .jYup:hover{
+	background: #fff;
+	color: rgb(79,79,79);
+}
+#jConfirm .jYup:active{
+	background: #fff;
+	color: rgba(79,79,79, 0.8);
+}
+#jConfirm .jNope{
+	background:rgb(79,79,79); border-color: #ae0d11;
+}
+#jConfirm .jNope:hover{
+	background: #fff;
+	color: rgb(79,79,79);
+}
+#jConfirm .jNope:active{
+	background: #fff;
+	color: rgba(79,79,79, 0.8);
+}
+#jConfirm a{
+	 cursor: pointer; margin: 5px; margin-bottom: 0px;  font-size: 13px; padding: 5px; color: #fff; border-radius: 5px; text-align: center; display: inline-block;
+}
+#jConfirm a:hover{
+	text-decoration: none;
+}

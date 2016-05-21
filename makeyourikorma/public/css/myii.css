@@ -152,10 +152,14 @@ body{
 	padding: 0 5px;
 	overflow-y: auto; 
 }*/
+#layers-container{
+	max-height: 300px;
+}
 #layers-container ul{
 	padding:0;
 	width:100%;
 	border: solid rgb(160,160,160) 1.5px;
+	overflow: auto;
 }
 #layers-container ul > li{
 	list-style: none;

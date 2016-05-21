@@ -8,7 +8,7 @@
 
 @section('head')
 	<link rel="stylesheet" href="{{ asset('plugins/perfectscroll/css/perfect-scrollbar.css') }}">
-	<link rel="stylesheet" href="{{ asset('css/myi.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/myii.css') }}">
 @endsection
 
 @section('logo')
@@ -112,7 +112,7 @@ window.fbAsyncInit = function() {
 							<i class="fa fa-share-alt fa-stack-1x"></i>
 						</span>
 					</a>
-					<a href="#" title="Send" class="download send">
+					<a href="#" title="Send" class="download send" id="send">
 						<span class="fa-stack fa-lg">
 							<i class="fa fa-circle fa-stack-2x"></i>
 							<i class="fa fa-send fa-stack-1x"></i>
@@ -167,6 +167,7 @@ window.fbAsyncInit = function() {
 			</div>
 		</div>	
 	</footer>
+	
 @endsection
 
 @section('scripts')

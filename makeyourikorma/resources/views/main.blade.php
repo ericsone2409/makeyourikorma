@@ -7,6 +7,7 @@
 	@yield('meta:vp')
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="{{ asset('components/jConfirm/jConfirm-v2.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/main2.css') }}">
 	@yield('head')
 </head>
@@ -14,6 +15,7 @@
 <div id="orientation">
 	<h1>please switch to landscape mode</h1>
 </div>
+@include('flash::message')
 	@yield('start-body')
 	<header>
 		<nav class="navbar-mine navbar navbar-default">
@@ -57,6 +59,7 @@
 	@yield('body')
 
 	<script type="text/javascript" src="{{ asset('components/jquery/dist/jquery.min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('components/jConfirm/jConfirm-v2.js') }}"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	@yield('scripts')
 </body>

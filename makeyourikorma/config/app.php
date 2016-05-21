@@ -147,7 +147,8 @@ return [
 
 		//proveedores personales:
 		'Laravel\Socialite\SocialiteServiceProvider',
-		'Intervention\Image\ImageServiceProvider'
+		'Intervention\Image\ImageServiceProvider',
+		'Laracasts\Flash\FlashServiceProvider'
 
 	],
 
@@ -200,6 +201,7 @@ return [
 		//facades personales:
 		'Socialize' => 'Laravel\Socialite\Facades\Socialite',
 		'Image' => 'Intervention\Image\Facades\Image',
+		'Flash' => 'Laracasts\Flash\Flash'
 
 	],
 

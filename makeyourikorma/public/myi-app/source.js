@@ -15,7 +15,8 @@ function mainMenu(id)
 	r.buttons = {
 		'share'    : '#share',
 		'download' : '#download',
-		'_delete'   : '#delete'
+		'_delete'   : '#delete',
+		'send'   : '#send'
 	}
 
 	r.id = id;

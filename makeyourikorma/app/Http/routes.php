@@ -43,6 +43,7 @@ Route::post('/myi/save', [
 
 Route::any('/myi/show/{id}', 'MyiController@seeImage');
 Route::any('/myi/download/{id}', 'MyiController@downloadImage');
+Route::any('/myi/send/{id}', 'MyiController@sendImage');
 
 //RUTAS PARA EL INICIO DE SESION CON FACE
 

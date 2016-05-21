@@ -7,6 +7,9 @@ use Image;
 use App\UniqueImage;
 use App\Imagen;
 use App\Color;
+use Mail;
+use Redirect;
+use Flash;
 
 
 use App\Ikorma;
@@ -66,6 +69,7 @@ class MyiController extends Controller {
 		return view('share', ['id' => $id]);
 	}
 
+
 	public function saveImage(Request $request)
 	{
 		$imgData = $request->data;
@@ -76,7 +80,7 @@ class MyiController extends Controller {
 
 		$dir = dirname(dirname(dirname(dirname(__DIR__))));
 
-		$marco = $dir . "\\public_html\\myi-app\\marco-negro-grande.png";
+		$marco = $dir . "\\makeyourikorma\\public\\myi-app\\marco-negro-grande.png";
 		
 		$img = Image::canvas(490, 490, "#fff")
 			->insert($imgData, 'top-left', 20, 20)
@@ -106,6 +110,20 @@ class MyiController extends Controller {
         $response->header('Content-Type', 'image/jpeg');
 
         return $response;
+	}
+	public function sendImage($id)
+	{
+		$enviar = array();
+
+		$enviar['id']= $id;
+		Mail::send('send', $enviar, function($msj){
+			$msj->subject('New Ikormas');
+			$msj->to('ericsone2409@gmail.com');
+		});
+        
+        Flash::message('Your Ikorma has been sent successfully');
+
+        return Redirect::to('/myi');
 	}
 
 	public function downloadImage($id)
