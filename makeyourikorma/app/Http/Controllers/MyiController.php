@@ -118,7 +118,7 @@ class MyiController extends Controller {
 		$enviar['id']= $id;
 		Mail::send('send', $enviar, function($msj){
 			$msj->subject('New Ikormas');
-			$msj->to('ericsone2409@gmail.com');
+			$msj->to('mangan87@gmail.com');
 		});
         
         Flash::message('Your Ikorma has been sent successfully');
