@@ -4,11 +4,17 @@
 
 @section('meta:vp')
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta property="fb:app_id" content="1682507535341378" />
+	<meta property="og:title" content="Make Your Ikorma" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="{{ url('myi/share/'.$id) }}" />
+	<meta property="og:image" content="{{ asset('img/home/logo2.png') }}" />
+	<meta property="og:description" content="I just made this ikorma" />
 @endsection
 
 @section('head')
 	<link rel="stylesheet" href="{{ asset('plugins/perfectscroll/css/perfect-scrollbar.css') }}">
-	<link rel="stylesheet" href="{{ asset('css/myi.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/myii.css') }}">
 @endsection
 
 @section('logo')
@@ -24,7 +30,7 @@
 				<div class="col-xs-12 col-lg-2">
 					<ul class="menu" id="creation-menu">
 						<div class="main-options">
-							<a href="#" id="shapes-img" class="option" data-shows="#dropdown-menu-mine">
+							<a href="#" id="shapes-img" class="option" data-shows="#allshapes-container">
 								<img class="img-responsive img-center" src="{{ asset('img/myi/shapes.png') }}">
 							</a>
 
@@ -35,32 +41,27 @@
 								<img class="img-responsive img-center" src="{{ asset('img/myi/layers.png') }}">
 							</a>
 						</div>
-						<div class="dropdown-mine">
-						    <ul id="dropdown-menu-mine" class="dropdown-menu-mine menu-slider-target">
-						        <li><a id="shapes" class="trigger-toggle-slider" data-shows="#shapes-container" href="#">shapes</a></li>
-						        <li><a id="facials" class="trigger-toggle-slider" data-shows="#facials-container" href="#">facials</a></li>						        
-						    </ul>
-						</div>
 					</ul>
 				</div>
 				<div class="canvas-container col-xs-12 col-lg-9">
-					<div id="shapes-container" class="shapes-container menu-slider-target">
-						<p>shapes</p>
-						<ul>
-						</ul>	
-					</div>
-					<div id="facials-container" class="shapes-container menu-slider-target">
-						<p>FACIALS</p>
-						<ul>
+					<div id="allshapes-container" class="allshapes-container menu-slider-target">
+						<h4>shapes</h4><!--ESTO ES DE EJEMPLO, IGUAL QUE EL LI QUE TIENE LA CLASE SELECTED-->
+						<ul class="allshapes-options">
+							<li class="selected" data-show="shapes"><a href="#"><img class="img-responsive" src="{{ asset('img/myi/boton1.png') }}" alt=""></a></li>
+							<li data-show="eyes"><a href="#" ><img class="img-responsive" src="{{ asset('img/myi/boton2.png') }}" alt=""></a></li>
+							<li data-show="mouth"><a href="#" ><img class="img-responsive" src="{{ asset('img/myi/boton3.png') }}" alt=""></a></li>
+							<li data-show="nose"><a href="#" ><img class="img-responsive" src="{{ asset('img/myi/boton4.png') }}" alt=""></a></li>
 						</ul>
+						<ul class="allshapes-ul"></ul>
 					</div>
-					<div id="colors-container" class="colors-container menu-slider-target">
-						<p>COLORS</p>
-						<ul class="colors">
-						</ul>
+					<div id="colors-container" class="allshapes-container center menu-slider-target">
+						<h4>COLORS</h4>
+						<div class="colors-wrapper">
+							<ul class="colors"></ul>
+						</div>
 					</div>
-					<div id="layers-container" class="layers-container menu-slider-target">
-						<p>layers</p>
+					<div id="layers-container" class="allshapes-container bottom menu-slider-target">
+						<h4>layers</h4>
 						<ul class="layers">
 						</ul>
 					</div>

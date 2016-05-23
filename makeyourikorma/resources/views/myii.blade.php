@@ -54,29 +54,10 @@ window.fbAsyncInit = function() {
 								<img class="img-responsive img-center" src="{{ asset('img/myi/layers.png') }}">
 							</a>
 						</div>
-						<!--
-						<div class="dropdown-mine">
-						    <ul id="dropdown-menu-mine" class="dropdown-menu-mine menu-slider-target">
-						        <li><a id="shapes" class="trigger-toggle-slider" data-shows="#shapes-container" href="#">shapes</a></li>
-						        <li><a id="facials" class="trigger-toggle-slider" data-shows="#facials-container" href="#">facials</a></li>						        
-						    </ul>
-						</div>
-						-->
 					</ul>
 				</div>
 				<div class="canvas-container col-xs-12 col-lg-9">
-					<!--
-					<div id="shapes-container" class="shapes-container menu-slider-target">
-						<p>shapes</p>
-						<ul>
-						</ul>	
-					</div>
-					<div id="facials-container" class="shapes-container menu-slider-target">
-						<p>FACIALS</p>
-						<ul>
-						</ul>
-					</div>
-					-->
+					
 					<div id="allshapes-container" class="allshapes-container menu-slider-target">
 						<h4>shapes</h4><!--ESTO ES DE EJEMPLO, IGUAL QUE EL LI QUE TIENE LA CLASE SELECTED-->
 						<ul class="allshapes-options">

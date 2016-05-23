@@ -80,7 +80,7 @@ App.init.addFunction(function (arg) {
 	App.serverInterface.saveImageResource = $(App.mainMenu.buttons.download).attr('data-url');
 	App.serverInterface.baseURL           = $('body').attr('data-base-url')
 
-	$(App.mainMenu.buttons.download).click(function() {
+	$(App.mainMenu.buttons.download).click(function(e) {
 		var dataURL = App.canvasController.generateBase64();
 		
 
